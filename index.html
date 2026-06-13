@@ -458,19 +458,116 @@ footer .legal{color:#7F8B99!important;}
 @media(prefers-reduced-motion:reduce){.imgband .scan::before{display:none}}
 </style>
 
-<!-- ===== HERO BACKGROUND UPDATE: apply uploaded abstract image to hero section ===== -->
+<!-- ===== MIDDLE + FOOTER BACKGROUND UPDATE: apply uploaded abstract image ===== -->
 <style>
-.hero.hero-v2{
+.channels.dark-section{
   background:
-    linear-gradient(180deg, rgba(6,26,51,.12) 0%, rgba(6,26,51,.20) 45%, rgba(6,26,51,.08) 72%, rgba(246,244,234,0) 100%),
-    linear-gradient(90deg, rgba(2,4,7,.78) 0%, rgba(2,4,7,.54) 34%, rgba(2,4,7,.26) 58%, rgba(2,4,7,.10) 76%, rgba(2,4,7,.24) 100%),
-    url("img/tjhs_hero_abstract.jpg") center center / cover no-repeat,
-    linear-gradient(180deg, #000000 0%, #020407 42%, #05070D 100%) !important;
+    linear-gradient(180deg, rgba(2,4,7,.84) 0%, rgba(2,4,7,.90) 100%),
+    linear-gradient(90deg, rgba(2,4,7,.86) 0%, rgba(2,4,7,.76) 42%, rgba(2,4,7,.82) 100%),
+    url("img/tjhs_hero_abstract.jpg") center center / cover no-repeat !important;
 }
-.hero.hero-v2::before{
-  opacity:.10 !important;
+.channels.dark-section::before{
+  background:
+    radial-gradient(760px 420px at 18% 14%, rgba(28,92,158,.22), transparent 62%),
+    radial-gradient(720px 420px at 84% 20%, rgba(191,161,90,.12), transparent 58%) !important;
+  opacity:.85 !important;
+}
+footer{
+  background:
+    linear-gradient(180deg, rgba(2,4,7,.92) 0%, rgba(2,4,7,.97) 100%),
+    linear-gradient(90deg, rgba(2,4,7,.94) 0%, rgba(6,26,51,.86) 42%, rgba(2,4,7,.94) 100%),
+    url("img/tjhs_hero_abstract.jpg") center bottom / cover no-repeat !important;
+  position:relative;
+}
+footer::before{
+  background:
+    linear-gradient(180deg, rgba(6,26,51,.12) 0%, rgba(2,4,7,.10) 100%),
+    radial-gradient(700px 300px at 12% 0%, rgba(28,92,158,.20), transparent 60%) !important;
+  opacity:.95 !important;
+}
+footer .wrap{position:relative;z-index:1;}
+</style>
+
+<!-- ===== VISIBILITY BOOST: make abstract image clearly visible in middle and footer ===== -->
+<style>
+.channels.dark-section{
+  background:#020407 !important;
+  position:relative;
+  overflow:hidden;
+}
+.channels.dark-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(2,4,7,.46) 0%, rgba(2,4,7,.28) 42%, rgba(2,4,7,.48) 100%),
+    linear-gradient(180deg, rgba(2,4,7,.34) 0%, rgba(2,4,7,.52) 100%),
+    url("img/tjhs_hero_abstract.jpg") center center / cover no-repeat !important;
+  opacity:1 !important;
+  filter:brightness(1.28) saturate(1.12);
+  pointer-events:none;
+}
+.channels.dark-section .wrap{
+  position:relative;
+  z-index:1;
+}
+footer{
+  background:#020407 !important;
+  position:relative;
+  overflow:hidden;
+}
+footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(2,4,7,.52) 0%, rgba(2,4,7,.32) 45%, rgba(2,4,7,.58) 100%),
+    linear-gradient(180deg, rgba(2,4,7,.42) 0%, rgba(2,4,7,.70) 100%),
+    url("img/tjhs_hero_abstract.jpg") center bottom / cover no-repeat !important;
+  opacity:1 !important;
+  filter:brightness(1.35) saturate(1.18);
+  pointer-events:none;
+}
+footer .wrap{
+  position:relative;
+  z-index:1;
 }
 </style>
+
+
+<!-- ===== HERO VISIBILITY FIX: apply abstract image visibly to hero section ===== -->
+<style>
+.hero.hero-v2{
+  background:#020407 !important;
+  position:relative;
+  overflow:hidden;
+}
+.hero.hero-v2::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(2,4,7,.54) 0%, rgba(2,4,7,.30) 44%, rgba(2,4,7,.42) 100%),
+    linear-gradient(180deg, rgba(2,4,7,.24) 0%, rgba(2,4,7,.36) 58%, rgba(2,4,7,.68) 100%),
+    url("img/tjhs_hero_abstract.jpg") center center / cover no-repeat !important;
+  opacity:1 !important;
+  filter:brightness(1.38) saturate(1.18);
+  mask-image:none !important;
+  -webkit-mask-image:none !important;
+  pointer-events:none;
+  z-index:0;
+}
+.hero.hero-v2::after{
+  z-index:1 !important;
+  height:170px !important;
+  background:linear-gradient(180deg, transparent 0%, rgba(246,244,234,.94) 82%) !important;
+}
+.hero-v2 > .wrap{
+  position:relative;
+  z-index:2;
+}
+</style>
+
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true">
