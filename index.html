@@ -87,7 +87,7 @@ nav.main{position:sticky;top:0;z-index:80;background:rgba(246,244,234,.72);backd
 nav.main.scrolled{background:rgba(255,255,255,.82);box-shadow:0 16px 50px rgba(7,29,31,.1)}
 nav.main .wrap{height:76px;display:flex;align-items:center;gap:28px}
 .brand{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:850;font-size:1.14rem;letter-spacing:-.02em;color:var(--ink)}
-.brand .mark{width:44px;height:44px;filter:drop-shadow(0 10px 18px rgba(11,42,74,.16))}.brandimg{height:50px;width:auto;display:block}@media(max-width:520px){.brandimg{height:42px}}.brand small{display:block;font-family:var(--font-body);font-weight:650;font-size:.61rem;color:var(--muted);letter-spacing:.045em;margin-top:1px}.navlinks{display:flex;align-items:center;gap:6px;margin-left:auto;border:1px solid rgba(7,29,31,.08);padding:5px;border-radius:999px;background:rgba(255,255,255,.42)}
+.brand .mark{width:44px;height:44px;filter:drop-shadow(0 10px 18px rgba(11,42,74,.16))}.brandimg{height:50px;width:auto;display:block}.brandmark{height:50px;width:50px;flex:none;display:block}.brandtext{display:flex;flex-direction:column;line-height:1.05}.bt-kicker{font-family:'Newsreader',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.3rem;letter-spacing:-.01em;color:#1C5C9E}.bt-name{font-family:'Newsreader',Georgia,'Times New Roman',serif;font-weight:700;font-size:1.3rem;letter-spacing:-.01em;color:#061A33;margin-top:0}@media(max-width:520px){.brandmark{height:42px;width:42px}.bt-kicker{font-size:1.06rem}.bt-name{font-size:1.06rem}}@media(max-width:520px){.brandimg{height:42px}}.brand small{display:block;font-family:var(--font-body);font-weight:650;font-size:.61rem;color:var(--muted);letter-spacing:.045em;margin-top:1px}.navlinks{display:flex;align-items:center;gap:6px;margin-left:auto;border:1px solid rgba(7,29,31,.08);padding:5px;border-radius:999px;background:rgba(255,255,255,.42)}
 .navlinks a{font-size:.84rem;font-weight:700;color:#496160;padding:8px 12px;border-radius:999px;transition:.25s ease}.navlinks a:hover,.navlinks a.active{color:var(--ink);background:rgba(11,42,74,.08)}
 .cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:none;border-radius:999px;font-weight:800;font-size:.9rem;padding:12px 20px;overflow:hidden;isolation:isolate;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;background:linear-gradient(135deg,var(--emerald),var(--emerald-2));color:#fff;box-shadow:0 12px 26px rgba(11,42,74,.25)}
 .cta::before{content:"";position:absolute;inset:-1px;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.45) 40%,transparent 70%);transform:translateX(-120%);transition:transform .75s ease;z-index:-1}.cta:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(11,42,74,.32)}.cta:hover::before{transform:translateX(120%)}
@@ -491,13 +491,12 @@ footer .legal{color:#7F8B99!important;}
 <nav class="main" id="mainnav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Telangana Journal of Health Sciences home">
-      <svg class="brandimg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 810 205" role="img" aria-label="Telangana Journal of Health Sciences" focusable="false">
-        <rect x="40" y="28" width="150" height="150" rx="31.95" fill="#061A33"/>
-        <text x="115" y="87.25" font-size="50.25" text-anchor="middle" fill="#FFFFFF" style="font-family:'Newsreader',Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:-1.6px">TJ<tspan x="115" dy="39.75">HS</tspan></text>
-        <rect x="83.5" y="146.5" width="63" height="4.69" rx="2.34" fill="#BFA15A"/>
-        <text x="225" y="77" font-size="17" fill="#BFA15A" style="font-family:'Inter',Arial,Helvetica,sans-serif;font-weight:700;letter-spacing:3.1px">TELANGANA JOURNAL</text>
-        <text x="225" y="132" font-size="58" letter-spacing="-1.2px" fill="#061A33" style="font-family:'Newsreader',Georgia,'Times New Roman',serif;font-weight:700">of Health Sciences</text>
+      <svg class="brandmark" viewBox="0 0 256 256" aria-hidden="true" focusable="false">
+        <rect x="16" y="16" width="224" height="224" rx="47.71" fill="#061A33"/>
+        <text x="128" y="104.48" font-size="75.04" text-anchor="middle" fill="#FFFFFF" style="font-family:'Newsreader',Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:-1.6px">TJ<tspan x="128" dy="59.36">HS</tspan></text>
+        <rect x="80.96" y="192.96" width="94.08" height="7" rx="3.5" fill="#BFA15A"/>
       </svg>
+      <span class="brandtext"><span class="bt-kicker">Telangana Journal</span><span class="bt-name">of Health Sciences</span></span>
     </a>
     <div class="navlinks" aria-label="Primary navigation">
       <a href="#articles">Articles</a>
